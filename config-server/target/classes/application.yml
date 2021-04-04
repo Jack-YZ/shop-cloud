@@ -1,0 +1,32 @@
+server:
+  port: 9100
+
+#本地配置中心
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+       native:
+         search-locations: classpath:config/
+
+#git配置中心
+#spring:
+#  application:
+#    name:  config-server
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/Jack-YZ/springcloudconfig.git #GitHub上面的git仓库名字
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+

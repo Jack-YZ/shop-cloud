@@ -1,0 +1,49 @@
+server:
+  port: 9000
+
+zuul:
+  SendErrorFilter:
+    error:
+      disable: true
+
+  host:
+    socket-timeout-millis: 60000  #zuul的socket超时设置
+    connect-timeout-millis: 60000 #zuul的connect超时设置
+  forceOriginalQueryStringEncoding: true #强制采用原始请求的编码格式，即不对Get请求参数做编解码
+  ignored-patterns: /*-server/** #忽略匹配这个格式的路径
+  sensitive-headers:
+
+  routes:
+    member-server-route:
+      path: /member/**
+      service-id: member-server
+      sensitive-headers:
+      custom-sensitive-headers: true
+      ribbon:
+        MaxAutoRetriesNextServer: 0
+        OkToRetryOnAllOperations: false
+        ConnectTimeout: 10000
+        ReadTimeout: 10000
+
+    seckill-server-route:
+          path: /seckill/**
+          service-id: seckill-server
+          sensitive-headers:
+          custom-sensitive-headers: true
+          ribbon:
+            MaxAutoRetriesNextServer: 0
+            OkToRetryOnAllOperations: false
+            ConnectTimeout: 10000
+            ReadTimeout: 10000
+
+  ratelimit:
+    key-prefix: ratelimit
+    enabled: true
+    repository: REDIS
+    behind-proxy: true
+    add-response-headers: true
+    default-policy-list: #optional - will apply unless specific policy exists
+      - limit: 10 #optional - request number limit per refresh interval window
+        refresh-interval: 60 #default value (in seconds)
+        type: #optional
+          - origin

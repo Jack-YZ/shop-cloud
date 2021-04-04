@@ -1,0 +1,53 @@
+{
+  "groups": [
+    {
+      "name": "shop.redis",
+      "type": "com.jz.redis.RedisProperties",
+      "sourceType": "com.jz.redis.RedisProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "shop.redis.host",
+      "type": "java.lang.String",
+      "sourceType": "com.jz.redis.RedisProperties",
+      "defaultValue": "localhost"
+    },
+    {
+      "name": "shop.redis.password",
+      "type": "java.lang.String",
+      "sourceType": "com.jz.redis.RedisProperties"
+    },
+    {
+      "name": "shop.redis.pool-max-idle",
+      "type": "java.lang.Integer",
+      "sourceType": "com.jz.redis.RedisProperties",
+      "defaultValue": 500
+    },
+    {
+      "name": "shop.redis.pool-max-total",
+      "type": "java.lang.Integer",
+      "sourceType": "com.jz.redis.RedisProperties",
+      "defaultValue": 500
+    },
+    {
+      "name": "shop.redis.pool-max-wait",
+      "type": "java.lang.Integer",
+      "sourceType": "com.jz.redis.RedisProperties",
+      "defaultValue": 500
+    },
+    {
+      "name": "shop.redis.port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.jz.redis.RedisProperties",
+      "defaultValue": 6379
+    },
+    {
+      "name": "shop.redis.timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.jz.redis.RedisProperties",
+      "defaultValue": 10
+    }
+  ],
+  "hints": []
+}

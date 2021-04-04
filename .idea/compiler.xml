@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
+        <module name="eureka-server" />
+        <module name="front-server" />
+        <module name="good-api" />
+        <module name="good-server" />
+        <module name="member-api" />
+        <module name="member-server" />
+        <module name="redis-spring-boot-starter" />
+        <module name="seckill-api" />
+        <module name="seckill-server" />
+        <module name="shop-common" />
+        <module name="websocket-server" />
+        <module name="zuul-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config-server" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="front-server" target="1.8" />
+      <module name="good-api" target="1.8" />
+      <module name="good-server" target="1.8" />
+      <module name="member-api" target="1.8" />
+      <module name="member-server" target="1.8" />
+      <module name="redis-spring-boot-starter" target="1.8" />
+      <module name="seckill-api" target="1.8" />
+      <module name="seckill-server" target="1.8" />
+      <module name="shop-cloud" target="1.8" />
+      <module name="shop-common" target="1.8" />
+      <module name="shop-provider" target="1.8" />
+      <module name="shop-provider-api" target="1.8" />
+      <module name="websocket-server" target="1.8" />
+      <module name="zuul-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

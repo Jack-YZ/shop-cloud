@@ -1,0 +1,8 @@
+shop:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 10
+    poolMaxTotal: 500
+    poolMaxIdle: 500
+    poolMaxWait: 500
