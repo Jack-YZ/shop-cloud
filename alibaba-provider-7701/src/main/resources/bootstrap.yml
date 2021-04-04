@@ -1,0 +1,15 @@
+server:
+  port: 7701
+
+spring:
+  application:
+    name: nacos-server
+
+  cloud:
+     nacos:
+       discovery:
+         server-addr: 192.168.20.20:8848
+
+
+
+
